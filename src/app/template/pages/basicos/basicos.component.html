@@ -1,0 +1,84 @@
+<div class="bg-light border rounded-3 mt-4">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <form (ngSubmit)="saveData()" #myForm="ngForm" autocomplete="off">
+                    <legend>Básicos</legend>
+                    <div class="mb-3">
+                        <label for="product" class="form-label">Producto</label>
+                        <input type="text" id="product" class="form-control" placeholder="Nombre del producto"
+                            name="product" minlength="3" ngModel required>
+                        <span class="form-text text-danger" *ngIf="productValid()">
+                            Debe de ser de 3 letras
+                        </span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Precio</label>
+                        <input type="number" id="price" class="form-control" placeholder="Precio del producto"
+                            name="price" ngModel appMin [minimo]="0">
+                            <span class="form-text text-danger" *ngIf="priceValid()">
+                                El precio debe ser 0 o mayor
+                            </span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="stocks" class="form-label">Existencias</label>
+                        <input type="number" id="stocks" class="form-control" placeholder="Existencias del producto"
+                            name="stocks" ngModel>
+                    </div>
+                    <button type="submit" class="btn btn-success mb-4 float-end"
+                        [disabled]="myForm.invalid">
+                        Guardar
+                    </button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light border rounded-3 mt-4">
+    <div class="container mt-4 mb-4">
+        <div class="row">
+            <div class="col">
+                <legend>Valid</legend>
+                <code>
+                    {{ myForm.valid }}
+                </code>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light border rounded-3 mt-4">
+    <div class="container mt-4 mb-4">
+        <div class="row">
+            <div class="col">
+                <legend>Pristine</legend>
+                <code>
+                    {{ myForm.pristine }}
+                </code>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light border rounded-3 mt-4">
+    <div class="container mt-4 mb-4">
+        <div class="row">
+            <div class="col">
+                <legend>Touched</legend>
+                <code>
+                    {{ myForm.touched }}
+                </code>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light border rounded-3 mt-4">
+    <div class="container mt-4 mb-4">
+        <div class="row">
+            <div class="col">
+                <legend>Value</legend>
+                <code>
+                    {{ myForm.value | json }}
+                </code>
+            </div>
+        </div>
+    </div>
+</div>
