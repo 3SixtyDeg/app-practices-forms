@@ -1,1 +1,56 @@
-<p>dinamicos works!</p>
+<div class="bg-light border rounded-3 mt-4">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">Template</li>
+                      <li class="breadcrumb-item active" aria-current="page">Dinámicos</li>
+                    </ol>
+                </nav>
+                <form (ngSubmit)="saveData()" autocomplete="off" #myForm="ngForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" id="name" class="form-control" placeholder="Nombre de la persona"
+                            name="name" [ngModel]="persona.nombre" required>
+                            <span class="form-text text-danger" *ngIf="nameValid()">
+                                Este campo es obligatorio
+                            </span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="agregar" class="form-label">Agregar</label>
+                        <div class="input-group mb-3">
+                            <input type="text" id="agregar" class="form-control" placeholder="Agregar favorito"
+                                name="agregar" [(ngModel)]="favorite" name="favorite" (keyup.enter)="addFavorite()">
+                            <button class="btn btn-outline-primary" type="button" (click)="addFavorite()">Button</button>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Favoritos</label>
+                        <div class="input-group mb-3" *ngFor="let favorito of persona.favoritos; let i = index">
+                            <input type="text" class="form-control"
+                            name="favorito_{{i}}" [(ngModel)]="favorito.nombre" required>
+                            <button class="btn btn-outline-danger" type="button" (click)="delete(i)">Eliminar</button>
+                        </div> 
+                    </div>
+                    <button type="submit" class="btn btn-success mb-4 float-end"
+                        [disabled]="myForm.invalid">
+                        Guardar
+                    </button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light border rounded-3 mt-4">
+    <div class="container mt-4 mb-4">
+        <div class="row">
+            <div class="col">
+                <legend>Persona</legend>
+                <pre>
+                    {{ persona | json }}
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>

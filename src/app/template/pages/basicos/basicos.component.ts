@@ -12,6 +12,12 @@ import { NgForm } from '@angular/forms';
 export class BasicosComponent implements OnInit {
   @ViewChild('myForm') myForm!: NgForm;
 
+  buildForm = {
+    product: 'RTX',
+    price: 10,
+    stocks: 10
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -27,6 +33,12 @@ export class BasicosComponent implements OnInit {
 
   public saveData() {
     console.log(this.myForm);
+
+    this.myForm.resetForm({
+      price: 0,
+      stocks: 0
+    });
+
   }
 
 }
