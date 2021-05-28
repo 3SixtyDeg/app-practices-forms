@@ -16,14 +16,36 @@ export class BasicosComponent implements OnInit {
   // });
 
   public myForm: FormGroup = this.formBuilder.group({
-    product: ['RTX', [Validators.required, Validators.minLength(3)]],
-    price: [10, [Validators.required, Validators.min(0)]],
-    stocks: [10, [Validators.required, Validators.min(0)]]
+    product: [null, [Validators.required, Validators.minLength(3)]],
+    price: [null, [Validators.required, Validators.min(0)]],
+    stocks: [null, [Validators.required, Validators.min(0)]]
   });
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+  
+    this.myForm.setValue({
+      product: 'RTX',
+      price: 10,
+      stocks: 10
+    });
+
+  }
+
+  public isValid(campo: string) {
+    return this.myForm.controls[campo].errors && this.myForm.controls[campo].touched;
+  }
+
+  public saveData() {
+    
+    if (this.myForm.invalid) {
+      this.myForm.markAllAsTouched();
+      return;
+    }
+
+    console.log(this.myForm.value);
+    this.myForm.reset();
   }
 
 }

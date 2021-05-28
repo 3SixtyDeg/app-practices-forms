@@ -8,17 +8,19 @@
                       <li class="breadcrumb-item active" aria-current="page">Switches</li>
                     </ol>
                 </nav>
-                <form autocomplete="off">
+                <form [formGroup]="myForm" (ngSubmit)="saveData()" autocomplete="off">
                     <div class="mb-3">
                         <label class="form-label">Género</label>
                         <div class="form-check">
-                            <input class="form-check-input" value="M" type="radio" name="gender" id="male" required>
+                            <input class="form-check-input" value="M" type="radio" id="male" 
+                                formControlName="gender" required>
                             <label class="form-check-label" for="male">
                                 Masculino
                             </label>
                         </div>
                         <div class="form-check">
-                        <input class="form-check-input" value="F" type="radio" name="genero" id="female" required>
+                        <input class="form-check-input" value="F" type="radio" id="female" 
+                            formControlName="gender" required>
                             <label class="form-check-label" for="female">
                                 Femenino
                             </label>
@@ -27,14 +29,16 @@
                    <div class="mb-3">
                         <label class="form-label">Notificaciones</label>
                             <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="notifications" name="notifications">
+                            <input class="form-check-input" type="checkbox" id="notifications" 
+                                formControlName="notifications">
                             <label class="form-check-label" for="notifications">Quiero recibir notificaciones</label>
                         </div>
                    </div>
                    <div class="mb-3">
                        <label class="form-label">Terminos y condiciones</label>
                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="terms" name="terms" required>
+                            <input class="form-check-input" type="checkbox" value="" id="terms" 
+                                formControlName="terms" required>
                             <label class="form-check-label" for="terms">
                                 Default checkbox
                             </label>
@@ -54,7 +58,7 @@
             <div class="col">
                 <legend>Valid</legend>
                 <code>
-        
+                    {{myForm.valid}}
                 </code>
             </div>
         </div>
@@ -66,7 +70,7 @@
             <div class="col">
                 <legend>Value</legend>
                 <pre>
-            
+                    {{myForm.value | json}}
                 </pre>
             </div>
         </div>
@@ -78,7 +82,7 @@
             <div class="col">
                 <legend>Person</legend>
                 <pre>
-              
+                    {{person | json}}
                 </pre>
             </div>
         </div>

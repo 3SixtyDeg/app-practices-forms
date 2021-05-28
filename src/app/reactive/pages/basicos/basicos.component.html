@@ -8,12 +8,12 @@
                       <li class="breadcrumb-item active" aria-current="page">Básicos</li>
                     </ol>
                 </nav>
-                <form [formGroup]="myForm" autocomplete="off">
+                <form (ngSubmit)="saveData()" [formGroup]="myForm" autocomplete="off">
                     <div class="mb-3">
                         <label for="product" class="form-label">Producto</label>
                         <input type="text" id="product" class="form-control" placeholder="Nombre del producto"
                             formControlName="product" minlength="3" required>
-                        <span class="form-text text-danger">
+                        <span class="form-text text-danger" *ngIf="isValid('product')">
                             Debe de ser de 3 letras
                         </span>
                     </div>
@@ -21,7 +21,7 @@
                         <label for="price" class="form-label">Precio</label>
                         <input type="number" id="price" class="form-control" placeholder="Precio del producto"
                             formControlName="price" required>
-                        <span class="form-text text-danger">
+                        <span class="form-text text-danger" *ngIf="isValid('price')">
                             El precio debe ser 0 o mayor
                         </span>
                     </div>
@@ -30,8 +30,7 @@
                         <input type="number" id="stocks" class="form-control" placeholder="Existencias del producto"
                             formControlName="stocks" required>
                     </div>
-                    <button type="submit" class="btn btn-success mb-4 float-end"
-                        [disabled]="myForm.invalid">
+                    <button type="submit" class="btn btn-success mb-4 float-end">
                         Guardar
                     </button>
                   </form>
