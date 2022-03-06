@@ -3,7 +3,7 @@
  <h2 align="center">app-practices-forms</h2>
  <p align="center">Template driven y model driven.</p>
 </p>
-  <p align="center">
+<p align="center">
      <a href="https://github.com/magranadosb/app-practices-forms/graphs/contributors">
       <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/magranadosb/app-practices-forms.svg?style=for-the-badge" />
      </a>
@@ -50,7 +50,7 @@
 ## Sobre el proyecto
 
 &nbsp;
-![](./src/assets/images/header.png)
+![](./src/assets/images/header.PNG)
 &nbsp;
  > Template driven y model driven.
 
