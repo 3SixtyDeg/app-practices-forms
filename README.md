@@ -4,21 +4,21 @@
  <p align="center">Template driven y model driven.</p>
 </p>
 <p align="center">
-     <a href="https://github.com/magranadosb/app-practices-forms/graphs/contributors">
-      <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/magranadosb/app-practices-forms.svg?style=for-the-badge" />
+     <a href="https://github.com/3SixtyDeg/app-practices-forms/graphs/contributors">
+      <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/3SixtyDeg/app-practices-forms.svg?style=for-the-badge" />
      </a>
-     <a href="https://github.com/magranadosb/app-practices-forms/issues">
-      <img alt="GitHub issues" src="https://img.shields.io/github/issues/magranadosb/app-practices-forms.svg?style=for-the-badge" />
+     <a href="https://github.com/3SixtyDeg/app-practices-forms/issues">
+      <img alt="GitHub issues" src="https://img.shields.io/github/issues/3SixtyDeg/app-practices-forms.svg?style=for-the-badge" />
      </a>
-     <a href="https://github.com/magranadosb/app-practices-forms/blob/main/LICENSE.md">
-      <img alt="GitHub license" src="https://img.shields.io/github/license/magranadosb/app-practices-forms.svg?style=for-the-badge" />
+     <a href="https://github.com/3SixtyDeg/app-practices-forms/blob/main/LICENSE.md">
+      <img alt="GitHub license" src="https://img.shields.io/github/license/3SixtyDeg/app-practices-forms.svg?style=for-the-badge" />
      </a>
-     <a href="https://github.com/magranadosb/app-practices-forms/pulls">
-      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/magranadosb/app-practices-forms.svg?style=for-the-badge" />
+     <a href="https://github.com/3SixtyDeg/app-practices-forms/pulls">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/3SixtyDeg/app-practices-forms.svg?style=for-the-badge" />
      </a>
 </p>
 <p align="center">
-    <a href="https://magranadosb.github.io/app-practices-forms/">Ver demo</a>
+    <a href="https://3SixtyDeg.github.io/app-practices-forms/">Ver demo</a>
 </p>
 <br/>
 <br/>
@@ -100,7 +100,7 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 _Clonar el repositorio._
 ```sh
-git clone https://github.com/magranadosb/app-practices-forms.git
+git clone https://github.com/3SixtyDeg/app-practices-forms.git
 ```
 
 _Instalar paquetes de NPM._
@@ -120,7 +120,7 @@ json-server --watch db.json
 
 ## Versionado
 
-Se usa [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/magranadosb/app-practices-forms/tags).
+Se usa [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/3SixtyDeg/app-practices-forms/tags).
 
 ## Contribuyentes
 &nbsp;
@@ -128,10 +128,10 @@ Se usa [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/magranadosb">
-        <img src="https://avatars.githubusercontent.com/u/75822956" width="50px;" alt="magranadosb"/><br>
+      <a href="https://github.com/3SixtyDeg">
+        <img src="https://avatars.githubusercontent.com/u/75822956" width="50px;" alt="3SixtyDeg"/><br>
         <sub>
-          <b>magranadosb</b>
+          <b>3SixtyDeg</b>
         </sub>
       </a>
     </td>
@@ -139,7 +139,7 @@ Se usa [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 </table>
 &nbsp;
 
-_También puedes mirar más detalles de todos los [contribuyentes](https://github.com/magranadosb/app-practices-forms/graphs/contributors) quíenes han participado en este proyecto._
+_También puedes mirar más detalles de todos los [contribuyentes](https://github.com/3SixtyDeg/app-practices-forms/graphs/contributors) quíenes han participado en este proyecto._
 
 ## Licencia
 
@@ -149,4 +149,4 @@ Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.
 
 <br/>
 
-![magranadosb](https://github-readme-stats.vercel.app/api?username=magranadosb&show_icons=true&locale=es)
+![3SixtyDeg](https://github-readme-stats.vercel.app/api?username=3SixtyDeg&show_icons=true&locale=es)
